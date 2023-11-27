@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Software Development Mentorship</title>
+</head>
+<body>
+    <header>
+        <img id="logo" src="{% static 'images/logo.png' %}" alt="Your Logo">
+    </header>
+    <div class="other-page-btn">
+        <a href="https://chat.whatsapp.com/Eyw9DlIlv0bLjKIysZ0sDe">Join our WhatsApp Group</a>
+    </div>
+
+    <form method='post' action='#'>
+        <p> Are you eager to embark on the journey of becoming an experienced web developer? 
+            Join our Free Software Developer Workshop, where you'll have the opportunity to meet 
+            seasoned web developers who will guide you through the roadmap to success in the field </p>
+        {% csrf_token %}
+        
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <label for="message">Question:</label>
+        <textarea placeholder='Enter a question you want addressed' id="message" name="question" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    
+</body>
+</html>
