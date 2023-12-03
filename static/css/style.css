@@ -71,7 +71,7 @@
         }
 
         form {
-            max-width: 60%;
+            max-width: 50%;
             margin: 20px auto;
             padding: 20px;
             background-color: #fff;
@@ -129,3 +129,15 @@
             color: #fff;
         }
     
+
+        @media only screen and (max-width: 600px) {
+            form {
+                max-width: 80%;
+                margin: 10px auto;
+               
+               
+                
+            }
+          
+            
+          }
